@@ -1,102 +1,45 @@
-# COIT20246 Cyber Security and Networking Project
+# Traffic Analysis Capture Files
 
-## Team Information
+This is a list of packet capture (PCAP) files taken when assessing the network security of Harbour Accounting & Tax Solutions. These captures give historical information of network activity during testing and corroborate the results of the final security assessment report. The measurements provided by the recorded traffic were very beneficial in creating a clear picture of how the devices and the services communicated in the network environment.
 
-- **Group Number:** 24
-- **Student 1:** Syed Omair (12321346)
-- **Student 2:** Sania Fatima (12319430)
-- **Student 3:** Ahmed Uddin Syed (12325506)
-- **Campus:** SYD
-- **Tutor:** Ahmad Saeed
+## Project Details
 
-## Repository Guide
+| Field | Details |
+|---|---|
+| Group Number | 24 |
+| Student 1 | Syed Omair (12321346) |
+| Student 2 | Sania Fatima (12319430) |
+| Student 3 | Ahmed Uddin Syed (12325506) |
+| Campus | SYD |
+| Tutor | Ahmad Saeed |
+| Business Name | Harbour Accounting & Tax Solutions |
+| Location | Sydney, Australia |
+| Business Type | Accounting and tax consultancy |
 
-This repository contains the complete project deliverables prepared for the OpenWRT network security implementation. The files include planning documents, network configuration evidence, security hardening activities, packet analysis, risk assessment outcomes, and team reflections.
+## Repository Files
 
-## Documentation Files
+- `plan.md`
+- `network.md`
+- `harden.md`
+- `security.md`
+- `reflection.md`
+- `images/`
+- `captures/`
+- `risk-assessment.xlsx`
 
-The project report has been organised into separate sections for easier navigation:
+The capture files were created to examine communication between network hosts, evaluate firewall operation and validate access control and that security controls implemented were functioning appropriately. The testing activities were: HTTP traffic analysis, ICMP connectivity testing, management interface testing, firewall rule testing and security hardening testing to meet the organisational requirements of security.
 
-- [Project Planning](./plan.md)
-- [Network Design and Deployment](./network.md)
-- [System Hardening and Packet Analysis](./harden.md)
-- [Risk Assessment and Security Measures](./security.md)
-- [Reflection and Team Contribution](./reflection.md)
+All traffic captured has been analysed in Wireshark for analysis of packet flows, behaviour of protocols, source and destination addresses, ports used, and attempts at connections etc. This analysis provided for the identification of allowed, denied, diverted and restricted traffic to understand the effectiveness or ineffectiveness of network policies and firewall configuration.
 
-## Completion Status
+This was followed up by additional reviews to identify attempts towards unauthorised access, verify network segmentation controls as well as identify abnormal traffic patterns. The capture files are very useful in troubleshooting, security checks, subsequent audits and remedies. They show that practical testing, network monitoring and documented technical observations formed the basis of the assessment conclusions and recommendations and was not just based on theoretical assumptions.
 
-The checklist below summarises the major activities completed during the project.
+## Contents of This Directory
 
-### Project Preparation
+- HTTP traffic analysis captures
+- ICMP and connectivity test captures
+- Firewall rule validation captures
+- Management access verification captures
+- Security hardening verification captures
+- Network monitoring and traffic inspection captures
 
-- [x] Team members assigned and responsibilities agreed
-- [x] GitHub Classroom repository established
-- [x] Communication strategy documented
-- [x] Project timeline prepared
-- [x] Contribution expectations reviewed by all members
-
-### Network Deployment
-
-- [x] Business scenario and assumptions prepared
-- [x] OpenWRT and VirtualBox environment configured
-- [x] Lab network diagram created
-- [x] Business website hosted on OpenWRT
-- [x] Firewall configurations tested and documented
-- [x] Production network topology completed
-
-### Security Implementation
-
-- [x] Default credentials replaced
-- [x] Password storage examined
-- [x] SSH key authentication enabled
-- [x] Unnecessary services reviewed and disabled
-- [x] HTTP traffic captured and analysed
-- [x] SSH traffic captured and analysed
-
-### Risk Assessment
-
-- [x] Security risk assessment completed
-- [x] Critical risks identified
-- [x] Security controls recommended
-- [x] Control implementation rationale documented
-
-### Reflection Activities
-
-- [x] GitHub commit evidence collected
-- [x] Contribution comparison completed
-- [x] Team collaboration reviewed
-- [x] Lessons learned documented
-
-### Supporting Resources
-
-- [x] Markdown report files completed
-- [x] Screenshots stored within the `images/` folder
-- [x] Packet capture files stored within the `captures/` folder
-- [x] Risk assessment spreadsheet included
-- [x] Demonstration video prepared
-
-### Submission Readiness
-
-- [x] PDF versions generated
-- [x] Repository ZIP archive created
-- [x] MP4 demonstration video exported
-- [x] Moodle submission completed
-- [x] Echo360 video submission completed
-
-## Repository Contents
-
-Important project resources include:
-
-- `plan.md` – project planning and scheduling
-- `network.md` – network configuration and firewall testing
-- `harden.md` – security hardening and packet analysis
-- `security.md` – risk assessment and recommended controls
-- `reflection.md` – contribution review and reflection
-- `images/` – screenshots and diagram exports
-- `captures/` – packet capture evidence
-- `risk-assessment.xlsx` – completed risk assessment workbook
-
-## Project Summary
-
-The project demonstrates the deployment of an OpenWRT-based business network environment with firewall controls, system hardening measures, traffic inspection, and cyber security risk evaluation. All required documentation, screenshots, diagrams, packet captures, spreadsheets, and supporting materials have been included within this repository to support the final submission package.
-```
+These captures provide details that help create an overall assessment of network security and evidence of assessment outcomes.
