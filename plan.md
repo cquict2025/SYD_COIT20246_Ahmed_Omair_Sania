@@ -7,7 +7,7 @@
 |---|---|
 | Unit | COIT20246 Cyber Security and Networking |
 | Project | OpenWRT Business Network Security Implementation |
-| Group Number | 13 |
+| Group Number | 24 |
 | Campus | SYD |
 | Tutor | Ahmad Saeed |
 | Student 1 | Syed Omair |
