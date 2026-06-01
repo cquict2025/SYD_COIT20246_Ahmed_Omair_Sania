@@ -1,61 +1,58 @@
-# Project Reflection
+# Project Reflection: Contribution Record and Group Review
 
-## GitHub Contribution Evidence
+## Overview
 
-Throughout the project, GitHub was used to store documentation, screenshots, diagrams, packet captures, and supporting files. The commit history provides evidence of project development and individual participation.
+This reflection gives an overview of how the team fulfilled the OpenWRT security and networking project. The activity was documented by GitHub commit, Markdown, network diagrams, screen shots and packet captures and a risk assessment spread sheet. The commit history was also not without purpose and was beneficial, however it did not reflect all the practical actions that needed to be done as some of them included tests and troubleshooting before the final evidence may be uploaded.
 
-![GitHub commit evidence](./images/github-commits.png)
+## 1. Individual Contributions
 
-## Team Contribution Summary
-
-| Student | Student ID | Key Responsibilities |
+| Student | Student ID | Main contribution area |
 |----------|------------|----------------------|
-| Syed Omair | 12321346 | OpenWRT deployment, website hosting, firewall testing, network configuration, screenshots, network documentation |
-| Sania Fatima | 12319430 | System hardening, SSH configuration, traffic capture, Wireshark investigation, security recommendations |
-| Ahmed Uddin Syed | 12325506 | Risk assessment, network diagrams, documentation review, project validation |
+| Syed Omair | 12321346 | OpenWRT setup, VirtualBox network docs, website setup, firewall testing, screenshots, lab and production diagrams and network.md docs. |
+| Sania Fatima | 12319430 | OpenWRT hardening, SSH key authentication, service hardening, HTTP/SSH captures, Wireshark review, risk assessment, security controls, and harden.md/security.md documentation. |
+| Ahmed Uddin Syed | 12325506 | Risk assessment support, network diagrams, documentation review, project validation and final verification. |
 
-### Activity Breakdown
+## 2. Task and Evidence Summary
 
-| Activity | Primary Contributor | Supporting Evidence |
-|-----------|-------------------|--------------------|
-| Project planning | Entire team | `plan.md` |
-| Business scenario development | Entire team | `network.md` |
-| Interface verification | Syed Omair | `openwrt-ip-addr.png` |
-| VirtualBox configuration review | Syed Omair | `virtualbox-adapter-1.png`, `virtualbox-adapter-2.png` |
-| Website deployment | Syed Omair | `website-browser-success.png` |
-| Firewall implementation | Syed Omair | HTTP, ICMP, SSH and management screenshots |
-| Lab topology design | Ahmed Uddin Syed | `lab-network-diagram.png` |
-| Production network design | Ahmed Uddin Syed | `production-network-diagram.png` |
-| Password and account security review | Sania Fatima | `root-password-change.png`, `etc-shadow-hash.png` |
-| SSH authentication setup | Sania Fatima | `ssh-key-generation.png`, `ssh-key-login-success.png` |
-| Service reduction and hardening | Sania Fatima | `enabled-services-before.png`, `service-disabled-after.png` |
-| HTTP packet investigation | Sania Fatima | HTTP capture files and screenshots |
-| SSH packet investigation | Sania Fatima | SSH capture files and screenshots |
-| Risk evaluation | Entire team | `risk-assessment.xlsx` |
-| Security recommendations | Entire team | `security.md` |
-| Reflection report | Entire team | `reflection.md` |
+| Work completed | Main contributor | Evidence used |
+|---------------|------------------|--------------|
+| Project planning and assumptions | Entire team | plan.md and network.md |
+| OpenWRT and VirtualBox setup | Syed Omair | OpenWRT IP screenshot and VirtualBox adapter screenshots |
+| Website and firewall testing | Syed Omair | Evidence of browser success screen and HTTP, ICMP, SSH and management interface |
+| Lab and production network diagrams | Ahmed Uddin Syed / Entire team | draw.io files and exported network diagram images |
+| Root password and hash review | Sania Fatima | Password change and /etc/shadow hash screenshots |
+| SSH key authentication | Sania Fatima | Key generation and SSH login success screenshots |
+| Service hardening | Sania Fatima | Enabled-services screenshot and disabled-service evidence |
+| Traffic capture and analysis | Sania Fatima | HTTP/SSH pcap files and Wireshark screenshots |
+| Risk assessment and controls | Entire team | risk-assessment.xlsx and security.md |
+| Final reflection | Entire team | reflection.md and GitHub commit record |
 
-## Evaluation of Contributions
+## 3. Reflection on Commits
 
-GitHub commits provide a useful record of repository activity; however, they do not always reflect the full amount of effort invested in a task. Several practical activities required extensive troubleshooting, testing, and verification before any files could be uploaded. As a result, some important technical work produced relatively few commits despite requiring significant effort.
+- GitHub commits were useful in following the apparent project advancement, particularly with the addition of files like Markdown reports, screenshots, diagrams, packet captures, and spreadsheets to the repository.
+- Perfect individual effort was not determined by the number of commits. Certain operations, including testing of fire walls, setting up of SSH, and packet capture, needed repeating operations before the final file was committed.
+- It will be better to commit every activity done rather than waiting until a number of similar steps would be done. This would enable the project history to be clearer and examinable.
 
-Examples include firewall testing, SSH authentication configuration, packet analysis, and troubleshooting network connectivity. These tasks involved multiple attempts, verification checks, and configuration adjustments before final evidence could be collected.
+## 4. Group Work Review
 
-The repository contains a combination of Markdown reports, screenshots, packet captures, diagrams, and risk assessment documents. Together, these files provide a complete record of the work completed by the team.
+The team split the work into two large fields: practical configuration, and written documentation. Practical activities were done beforehand in order to be able to support the reports with actual screen shots, actual working firewall rules and active IP addresses, and actual traffic. This would increase the accuracy of the final documentation, and minimize the chances of having to write unsupported claims. Cooperation was most effective at the planning, network design, security control selection and the ultimate review phase. Another lesson learned in the project was that it's important to have the technical evidence arranged early on, as soon as screenshots and file names fall out of control with large numbers of tasks being performed side by side.
 
-The project benefited from regular collaboration during planning, deployment, testing, hardening, analysis, and documentation stages. Future projects would benefit from more frequent individual commits so that contribution records better represent ongoing progress.
+## 5. Main Technical Issues and Fixes
 
-## Reflection on Teamwork
+| Issue | Impact | How it was managed |
+|--------|--------|-------------------|
+| Wrong website directory | The active web path was being used: /srv/www/index.html and not /www/index.html so the old webpage kept appearing. | The proper active directory was found and the file of the website was placed in the corresponding path. |
+| SSH connection errors | Modifications of the SSH port and to key-based authentication led to connection refused issues. | Dropbear configuration has been verified, the service restarted and SSH login successfully tested again. |
+| Browser cache during HTTP capture | There were also some 304 Not Modified responses for some of the HTTP packets which made the capture less clear. | It was still useful for metadata of request/response and the capture problem with caching was recorded in the analysis. |
+| Evidence management | Screenshots, commands, paths and ports can be confusing if not noted down immediately. | A clearer checklist and evidence log should be used in future projects. |
 
-The project was completed by dividing responsibilities between technical implementation and documentation tasks. Practical activities were completed first so that the report could be supported by genuine screenshots, real configuration data, tested firewall rules, packet captures, and verified results. This approach improved consistency between the technical work and written documentation.
+## 6. Added Improvement Points
 
-One challenge encountered involved locating the correct web directory used by the OpenWRT server. Initially, changes were made in the wrong location, which caused outdated webpage content to continue appearing. The issue was resolved after identifying the correct directory and updating the active website files.
+- Start with a common task checklist format, including a column on task status, an evidence file name column, a column for the command(s) run, and column for comments from the Reviewer.
+- Establish a common naming convention for the screenshots and packet capturing for the final report that makes auditing more straightforward.
+- Write down details of trouble-shooting at once like IPs, ports, service names, exact file paths etc.
+- Make smaller but more frequent commits to convey the message of technical advances and documentation advances in the GitHub history.
 
-Another difficulty involved SSH administration. Modifying the SSH port and enabling key-based authentication occasionally caused connection failures due to incorrect settings. The issue was resolved by reviewing Dropbear configuration files, restarting services, and retesting connections until successful access was restored.
+## 7. Final Learning Summary
 
-Traffic analysis also presented challenges. During HTTP packet inspection, cached responses such as "304 Not Modified" appeared in several captures. While these packets still provided useful information, they highlighted the influence of browser caching on network analysis activities.
-
-For future projects, maintaining a shared checklist and documenting technical issues immediately would improve efficiency. Recording file locations, commands, IP addresses, and configuration changes during implementation would reduce troubleshooting time and simplify report preparation.
-
-Overall, this project strengthened understanding of OpenWRT administration, VirtualBox networking, firewall rule management, SSH security, packet capture techniques, Wireshark analysis, and the importance of aligning technical evidence with professional documentation.
-```
+Overall, the project benefitted the group in understanding their OpenWRT networking better, their VirtualBox lab design, their firewall testing processes, the hardening of SSH, their service control processes, their traffic capturing processes, their Wireshark analysing processes, and their risk-based documentation. The most critical lesson learned was that technical work and evidence management must go hand-in-hand. Once the screenshots, commands, diagram and sections of a report are lined up correctly, the final product is clearer, more trustworthy and elevates the bar to be defensible.
