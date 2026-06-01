@@ -2,7 +2,7 @@
 
 ## Team Information
 
-- **Group Number:** 13
+- **Group Number:** 24
 - **Student 1:** Syed Omair (12321346)
 - **Student 2:** Sania Fatima (12319430)
 - **Student 3:** Ahmed Uddin Syed (12325506)
