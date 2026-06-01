@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram name="Production Network Design" id="production-network-design">
+    <mxGraphModel dx="1191" dy="712" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="COIT20246 Production Network Design - Sydney TaxCare Services" vertex="1">
+          <mxGeometry height="40" width="760" x="210" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="internet" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14" value="Internet" vertex="1">
+          <mxGeometry height="80" width="120" x="505" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fw" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13" value="Router / Firewall&lt;br&gt;&lt;b&gt;LAN: 98.10.10.1/24&lt;/b&gt;&lt;br&gt;&lt;b&gt;DMZ: 72.10.20.1/24&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="455" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="lanSwitch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13" value="Internal Switch&lt;br&gt;&lt;b&gt;Mgmt: 98.10.10.2/24&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="210" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="dmz" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13" value="DMZ Web Server&lt;br&gt;&lt;b&gt;72.10.20.10/24&lt;/b&gt;&lt;br&gt;Hosts business website" vertex="1">
+          <mxGeometry height="80" width="220" x="720" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="lanLabel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" value="Staff LAN: 98.10.10.0/24" vertex="1">
+          <mxGeometry height="40" width="250" x="190" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="dmzLabel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" value="Web Server DMZ: 72.10.20.0/24" vertex="1">
+          <mxGeometry height="40" width="250" x="705" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Manager PC&lt;br&gt;98.10.10.20/24" vertex="1">
+          <mxGeometry height="60" width="140" x="55" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="admin1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Admin PC 1&lt;br&gt;98.10.10.21/24" vertex="1">
+          <mxGeometry height="60" width="140" x="215" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="admin2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Admin PC 2&lt;br&gt;98.10.10.22/24" vertex="1">
+          <mxGeometry height="60" width="140" x="375" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="cons1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Consultant PC 1&lt;br&gt;98.10.10.23/24" vertex="1">
+          <mxGeometry height="60" width="140" x="55" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="cons2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Consultant PC 2&lt;br&gt;98.10.10.24/24" vertex="1">
+          <mxGeometry height="60" width="140" x="215" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="cons3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Consultant PC 3&lt;br&gt;98.10.10.25/24" vertex="1">
+          <mxGeometry height="60" width="140" x="375" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="cons4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Consultant PC 4&lt;br&gt;98.10.10.26/24" vertex="1">
+          <mxGeometry height="60" width="140" x="535" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="it" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="IT Support PC&lt;br&gt;98.10.10.30/24" vertex="1">
+          <mxGeometry height="60" width="140" x="535" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="printer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" value="Network Printer&lt;br&gt;98.10.10.40/24" vertex="1">
+          <mxGeometry height="60" width="140" x="695" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" value="Production IP plan uses both group members&#39; IDs:&lt;br&gt;Jazib 12311998 → Staff LAN starts with 98&lt;br&gt;Masood 12316372 → DMZ starts with 72" vertex="1">
+          <mxGeometry height="120" width="290" x="820" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="internet" style="endArrow=classic;html=1;rounded=0;strokeWidth=2" target="fw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="fw" style="endArrow=classic;html=1;rounded=0;strokeWidth=2" target="lanSwitch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fw" style="endArrow=classic;html=1;rounded=0;strokeWidth=2" target="dmz">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="manager">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="admin1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="admin2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="it">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="printer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="cons1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="cons2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="cons3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="lanSwitch" style="endArrow=classic;html=1;rounded=0" target="cons4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
